@@ -1,2 +1,12 @@
 # ionicProyect
-si
+--------------------------
+      Dependencias
+--------------------------
+
+
+
+--------------------------
+      Integrantes
+--------------------------
+   -Sofia Cartagena
+   -Fabian Quiñones
