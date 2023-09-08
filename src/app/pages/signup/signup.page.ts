@@ -21,7 +21,9 @@ export class SignupPage implements OnInit {
   ngOnInit() {
   }
   async guardar(){
+
     var f = this.formularioregistro.value;
+
     if(this.formularioregistro.invalid){
       const alert = await this.alertController.create({
         message:'llena todo',
@@ -34,6 +36,7 @@ export class SignupPage implements OnInit {
       nombre: f.nombre,
       password: f.password
     }
+    
     localStorage.setItem('usuario',JSON.stringify(usuario));
   }
 }
