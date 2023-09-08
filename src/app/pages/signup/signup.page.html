@@ -1,0 +1,25 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    
+      <form [formGroup]="formularioregistro" (keyup.enter)="guardar()" >
+        <ion-item>
+          <ion-label> Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label >Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label >contraseña</ion-label>
+          <ion-input formControlName="confirm" type="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="guardar()">Registrarse
+        </ion-button>
+      </form>
+
+  </ion-card>
+</ion-content>
