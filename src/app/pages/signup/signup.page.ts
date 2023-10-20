@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validator,UntypedFormBuilder, FormBuilder, Validators } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
+import { Router, RouterLink } from '@angular/router';
+import { AlertController, NavController } from '@ionic/angular';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.page.html',
@@ -38,5 +39,6 @@ export class SignupPage implements OnInit {
     }
     
     localStorage.setItem('usuario',JSON.stringify(usuario));
+    
   }
 }

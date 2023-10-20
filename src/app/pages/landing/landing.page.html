@@ -1,8 +1,41 @@
-
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content >
+    <ion-item routerLink="/landing">
+      <ion-icon name="home-outline" slot="start"></ion-icon>
+      <ion-label>Pagina princial</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-segment (ionChange)="cambiodepagina($event)">
+        <ion-segment-button value="asistencias">
+          <ion-icon name="list"></ion-icon>
+          <ion-label>asistencias</ion-label>
+        </ion-segment-button>   
+      </ion-segment>
+    </ion-item>
+  </ion-content>
+  <ion-button (click)="salir()">
+    <ion-icon name="power" slot="start"></ion-icon>
+    <ion-label>salir</ion-label>
+  </ion-button>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="container">
-  <ion-title>Bienvenido: admin</ion-title>
+  <ion-title>Bienvenido: {{this.name}}</ion-title>
     <ion-img src="assets/profe.png"/>
 
   <ion-title> Registra tu asistencia </ion-title>
@@ -14,3 +47,4 @@
     </ion-fab-button>
   </ion-fab>
 </ion-content>
+  <ion-router-outlet></ion-router-outlet>
